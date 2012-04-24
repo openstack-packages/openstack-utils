@@ -1,0 +1,33 @@
+%global rel 1
+
+Name:           openstack-utils
+Version:        2012.1
+Release:        %{rel}%{?dist}
+Summary:        Helper utilities for OpenStack services
+URL:            https://github.com/fedora-openstack/openstack-utils
+Source0:        http://pbrady.fedorapeople.org/%{name}/%{name}-%{version}-%{rel}.tar.gz
+License:        ASL 2.0
+BuildArch:      noarch
+
+%description
+Utilities to aid the setup and configuration of OpenStack packages.
+
+%prep
+%setup -q -n %{name}-%{version}-%{rel}
+
+%build
+
+%install
+mkdir -p %{buildroot}%{_bindir}/
+install -p -m 755 -t %{buildroot}%{_bindir}/ utils/*
+mkdir -p %{buildroot}%{_mandir}/man1
+install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
+
+%files
+%doc LICENSE
+%{_bindir}/*
+%{_mandir}/man1/*.1.gz
+
+%changelog
+* Wed Apr 11 2012 Pádraig Brady <P@draigBrady.com> 2012.1-1
+- Initial release supporting the Essex OpenStack release
