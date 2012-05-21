@@ -2,12 +2,14 @@
 
 Name:           openstack-utils
 Version:        2012.1
-Release:        %{rel}%{?dist}
+Release:        %{rel}.1%{?dist}
 Summary:        Helper utilities for OpenStack services
 URL:            https://github.com/fedora-openstack/openstack-utils
 Source0:        http://pbrady.fedorapeople.org/%{name}/%{name}-%{version}-%{rel}.tar.gz
 License:        ASL 2.0
 BuildArch:      noarch
+
+Requires:       python-iniparse
 
 %description
 Utilities to aid the setup and configuration of OpenStack packages.
@@ -29,5 +31,8 @@ install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/*.1.gz
 
 %changelog
+* Mon May 21 2012 Alan Pevec <apevec@redhat.com> 2012.1-1.1
+- add missing dependency for openstack-config
+
 * Wed Apr 11 2012 Pádraig Brady <P@draigBrady.com> 2012.1-1
 - Initial release supporting the Essex OpenStack release
