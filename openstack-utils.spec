@@ -2,7 +2,7 @@
 
 Name:           openstack-utils
 Version:        2012.1
-Release:        %{rel}%{?dist}
+Release:        %{rel}%{?dist}.1
 Summary:        Helper utilities for OpenStack services
 URL:            https://github.com/fedora-openstack/openstack-utils
 Source0:        http://pbrady.fedorapeople.org/%{name}/%{name}-%{version}-%{rel}.tar.gz
@@ -31,6 +31,9 @@ install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/*.1.gz
 
 %changelog
+* Fri Jul 20 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2012.1-2.1
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
+
 * Tue May 22 2012 Pádraig Brady <P@draigBrady.com> 2012.1-2
 - Improve validation done by openstack-config and openstack-db
 - Fix openstack-demo-install
