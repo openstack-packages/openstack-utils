@@ -1,8 +1,8 @@
-%global rel 2
+%global rel 1
 
 Name:           openstack-utils
-Version:        2012.1
-Release:        %{rel}%{?dist}.1
+Version:        2012.2
+Release:        %{rel}%{?dist}
 Summary:        Helper utilities for OpenStack services
 URL:            https://github.com/fedora-openstack/openstack-utils
 Source0:        http://pbrady.fedorapeople.org/%{name}/%{name}-%{version}-%{rel}.tar.gz
@@ -31,6 +31,9 @@ install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/*.1.gz
 
 %changelog
+* Mon Sep 17 2012 Pádraig Brady <P@draigBrady.com> 2012.2-1
+- Update from upstream to support folsom packages
+
 * Fri Jul 20 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2012.1-2.1
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
 
