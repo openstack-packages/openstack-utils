@@ -1,4 +1,4 @@
-%global rel 3
+%global rel 4
 
 Name:           openstack-utils
 Version:        2012.2
@@ -31,7 +31,7 @@ install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/*.1.gz
 
 %changelog
-* Mon Sep 18 2012 Pádraig Brady <P@draigBrady.com> 2012.2-3
+* Mon Sep 24 2012 Pádraig Brady <P@draigBrady.com> 2012.2-4
 - Update from upstream to support folsom packages
 
 * Fri Jul 20 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2012.1-2.1
