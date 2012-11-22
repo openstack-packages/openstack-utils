@@ -1,4 +1,4 @@
-%global rel 6
+%global rel 7
 
 Name:           openstack-utils
 Version:        2012.2
@@ -31,6 +31,9 @@ install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/*.1.gz
 
 %changelog
+* Thu Nov 22 2012 Pádraig Brady <P@draigBrady.com> 2012.2-7
+- Fix Essex installs
+
 * Thu Nov 08 2012 Alan Pevec <apevec@redhat.com> 2012.2-6
 - Disable Quantum rhbz#873823
 
