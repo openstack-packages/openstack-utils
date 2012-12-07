@@ -1,7 +1,7 @@
-%global rel 7
+%global rel 1
 
 Name:           openstack-utils
-Version:        2012.2
+Version:        2013.1
 Release:        %{rel}%{?dist}
 Summary:        Helper utilities for OpenStack services
 URL:            https://github.com/fedora-openstack/openstack-utils
@@ -31,6 +31,11 @@ install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/*.1.gz
 
 %changelog
+* Fri Dec  7 2012 Pádraig Brady <P@draigBrady.com> 2013.1-1
+- Support grizzly installs
+- Install novnc
+- Fix setup issues on RHEL based systems
+
 * Thu Nov 22 2012 Pádraig Brady <P@draigBrady.com> 2012.2-7
 - Fix Essex installs
 
