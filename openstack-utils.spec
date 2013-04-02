@@ -1,4 +1,4 @@
-%global rel 1
+%global rel 3
 
 Name:           openstack-utils
 Version:        2013.1
@@ -31,6 +31,11 @@ install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/*.1.gz
 
 %changelog
+* Tue Apr  2 2013 Pádraig Brady <P@draigBrady.com> 2013.1-3
+- Grizzly keystone sample credentials adjustments
+- Support systems with SELinux disabled
+- Improve handling of users in openstack-db --drop
+
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2013.1-1.1
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
