@@ -2,7 +2,7 @@
 
 Name:           openstack-utils
 Version:        2013.1
-Release:        %{rel}%{?dist}.1
+Release:        %{rel}%{?dist}
 Summary:        Helper utilities for OpenStack services
 URL:            https://github.com/fedora-openstack/openstack-utils
 Source0:        https://github.com/redhat-openstack/%{name}/archive/%{version}-%{rel}.tar.gz
