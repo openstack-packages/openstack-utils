@@ -1,4 +1,4 @@
-%global rel 5
+%global rel 6
 
 Name:           openstack-utils
 Version:        2013.1
@@ -31,7 +31,7 @@ install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/*.1.gz
 
 %changelog
-* Tue Apr  2 2013 Pádraig Brady <P@draigBrady.com> 2013.1-5
+* Tue Apr  9 2013 Pádraig Brady <P@draigBrady.com> 2013.1-6
 - Grizzly keystone sample credentials adjustments
 - Support systems with SELinux disabled
 - Improve handling of users in openstack-db --drop
