@@ -1,11 +1,11 @@
-%global rel 6
+%global rel 7
 
 Name:           openstack-utils
 Version:        2013.1
 Release:        %{rel}%{?dist}
 Summary:        Helper utilities for OpenStack services
 URL:            https://github.com/fedora-openstack/openstack-utils
-Source0:        https://github.com/redhat-openstack/%{name}/archive/%{version}-%{rel}.tar.gz
+Source0:        https://github.com/redhat-openstack/%{name}/archive/%{version}-%{rel}.tar.gz#/%{name}-%{version}-%{rel}.tar.gz
 License:        ASL 2.0
 BuildArch:      noarch
 
@@ -31,6 +31,9 @@ install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/*.1.gz
 
 %changelog
+* Wed Apr 24 2013 Pádraig Brady <P@draigBrady.com> 2013.1-7
+- Fix detection of nova installation in openstack-status
+
 * Tue Apr  9 2013 Pádraig Brady <P@draigBrady.com> 2013.1-6
 - Grizzly keystone sample credentials adjustments
 - Support systems with SELinux disabled
