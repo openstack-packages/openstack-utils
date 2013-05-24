@@ -1,4 +1,4 @@
-%global rel 7
+%global rel 8
 
 Name:           openstack-utils
 Version:        2013.1
@@ -31,6 +31,9 @@ install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/*.1.gz
 
 %changelog
+* Fri May 24 2013 Pádraig Brady <P@draigBrady.com> 2013.1-8
+- Display quantum services correctly
+
 * Wed Apr 24 2013 Pádraig Brady <P@draigBrady.com> 2013.1-7
 - Fix detection of nova installation in openstack-status
 
