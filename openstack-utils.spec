@@ -9,7 +9,7 @@ Source0:        https://github.com/redhat-openstack/%{name}/archive/%{version}-%
 License:        ASL 2.0
 BuildArch:      noarch
 
-Requires:       python-iniparse
+Requires:       crudini
 
 %description
 Utilities to aid the setup and configuration of OpenStack packages.
