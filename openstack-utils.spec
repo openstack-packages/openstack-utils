@@ -2,7 +2,7 @@
 
 Name:           openstack-utils
 Version:        2013.1
-Release:        %{rel}%{?dist}
+Release:        %{rel}%{?dist}.1
 Summary:        Helper utilities for OpenStack services
 URL:            https://github.com/fedora-openstack/openstack-utils
 Source0:        https://github.com/redhat-openstack/%{name}/archive/%{version}-%{rel}.tar.gz#/%{name}-%{version}-%{rel}.tar.gz
@@ -31,6 +31,9 @@ install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/*.1.gz
 
 %changelog
+* Sat Aug 03 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2013.1-8.1
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
+
 * Fri May 24 2013 Pádraig Brady <P@draigBrady.com> 2013.1-8
 - Display quantum services correctly
 
