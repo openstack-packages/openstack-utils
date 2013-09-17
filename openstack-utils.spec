@@ -1,7 +1,7 @@
-%global rel 8
+%global rel 1
 
 Name:           openstack-utils
-Version:        2013.1
+Version:        2013.2
 Release:        %{rel}%{?dist}.1
 Summary:        Helper utilities for OpenStack services
 URL:            https://github.com/redhat-openstack/openstack-utils
@@ -31,6 +31,11 @@ install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/*.1.gz
 
 %changelog
+* Tue Sep 17 2013 Pádraig Brady <pbrady@redhat.com> 2013.2-1
+- Improve reporting of services in openstack-status
+- Add heat and ceilometer services to those reported
+- Prompt the user if switching databases with openstack-db
+
 * Sat Aug 03 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2013.1-8.1
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
 
