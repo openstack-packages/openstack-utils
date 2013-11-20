@@ -1,8 +1,8 @@
-%global rel 1
+%global rel 2
 
 Name:           openstack-utils
 Version:        2013.2
-Release:        %{rel}%{?dist}.1
+Release:        %{rel}%{?dist}
 Summary:        Helper utilities for OpenStack services
 URL:            https://github.com/redhat-openstack/openstack-utils
 Source0:        https://github.com/redhat-openstack/%{name}/archive/%{version}-%{rel}.tar.gz#/%{name}-%{version}-%{rel}.tar.gz
@@ -31,6 +31,12 @@ install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/*.1.gz
 
 %changelog
+* Wed Nov 20 2013 Pádraig Brady <pbrady@redhat.com> - 2013.2-2
+- Improve openstack-status output
+- Add a new openstack-service command to to control enabled services
+- Add an --update option to openstack-db to update a service's database
+- Add support for heat and neutron to openstack-db
+
 * Tue Sep 17 2013 Pádraig Brady <pbrady@redhat.com> 2013.2-1
 - Improve reporting of services in openstack-status
 - Add heat and ceilometer services to those reported
