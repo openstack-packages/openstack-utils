@@ -1,4 +1,4 @@
-%global rel 2
+%global rel 3
 
 Name:           openstack-utils
 Version:        2013.2
@@ -31,6 +31,9 @@ install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/*.1.gz
 
 %changelog
+* Thu Jan 09 2014 Pádraig Brady <pbrady@redhat.com> - 2013.2-3
+- Avoid permissions issues with openstack-db 'sync' and 'init'
+
 * Wed Nov 20 2013 Pádraig Brady <pbrady@redhat.com> - 2013.2-2
 - Improve openstack-status output
 - Add a new openstack-service command to to control enabled services
