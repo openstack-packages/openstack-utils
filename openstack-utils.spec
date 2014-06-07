@@ -2,7 +2,7 @@
 
 Name:           openstack-utils
 Version:        2014.1
-Release:        %{rel}%{?dist}
+Release:        %{rel}%{?dist}.1
 Summary:        Helper utilities for OpenStack services
 URL:            https://github.com/redhat-openstack/openstack-utils
 Source0:        https://github.com/redhat-openstack/%{name}/archive/%{version}-%{rel}.tar.gz#/%{name}-%{version}-%{rel}.tar.gz
@@ -31,6 +31,9 @@ install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/*.1.gz
 
 %changelog
+* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2014.1-1.1
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
+
 * Thu Apr 24 2014 Pádraig Brady <pbrady@redhat.com> - 2014.1-1
 - Add support for icehouse incubated/integrated projects
 
