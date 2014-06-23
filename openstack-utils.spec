@@ -1,4 +1,4 @@
-%global rel 1
+%global rel 3
 
 Name:           openstack-utils
 Version:        2014.1
@@ -10,6 +10,7 @@ License:        ASL 2.0
 BuildArch:      noarch
 
 Requires:       crudini
+Requires:       curl
 
 %description
 Utilities to aid the setup and configuration of OpenStack packages.
@@ -31,6 +32,13 @@ install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/*.1.gz
 
 %changelog
+* Mon Jun 23 2014 Pádraig Brady <pbrady@redhat.com> - 2014.1-3
+- Add dependency on curl, needed by openstack-status
+- openstack-service: improve support for systemd based platforms
+- openstack-db: improve diagnostics for db sync failure
+- openstack-demo-install: remove as no longer supported
+- openstack-status: handle http redirects (to https etc.)
+
 * Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2014.1-1.1
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
 
