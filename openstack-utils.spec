@@ -1,8 +1,8 @@
-%global rel 3
+%global rel 1
 
 Name:           openstack-utils
-Version:        2014.1
-Release:        %{rel}%{?dist}.1
+Version:        2014.2
+Release:        %{rel}%{?dist}
 Summary:        Helper utilities for OpenStack services
 URL:            https://github.com/redhat-openstack/openstack-utils
 Source0:        https://github.com/redhat-openstack/%{name}/archive/%{version}-%{rel}.tar.gz#/%{name}-%{version}-%{rel}.tar.gz
@@ -32,6 +32,12 @@ install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/*.1.gz
 
 %changelog
+* Mon Dec 08 2014 Pádraig Brady <pbrady@redhat.com> - 2014.2-1
+- openstack-service: don't restart neutron-ovs-cleanup (rhbz#1133920)
+- openstack-status: don't display status for uninstalled services on systemd platforms
+- openstack-status: list "target" service status instead of obsolete "tgtd"
+- openstack-status: list openstack-ceilometer-notification and neutron-metering-agent services
+
 * Mon Jun 23 2014 Pádraig Brady <pbrady@redhat.com> - 2014.1-3
 - Add dependency on curl, needed by openstack-status
 - openstack-service: improve support for systemd based platforms
