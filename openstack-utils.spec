@@ -2,7 +2,7 @@
 
 Name:           openstack-utils
 Version:        2014.2
-Release:        %{rel}%{?dist}
+Release:        %{rel}%{?dist}.1
 Summary:        Helper utilities for OpenStack services
 URL:            https://github.com/redhat-openstack/openstack-utils
 Source0:        https://github.com/redhat-openstack/%{name}/archive/%{version}-%{rel}.tar.gz#/%{name}-%{version}-%{rel}.tar.gz
@@ -32,6 +32,9 @@ install -p -D -m 644 man/*.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/*.1.gz
 
 %changelog
+* Thu Jun 18 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2014.2-1.1
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
+
 * Mon Dec 08 2014 Pádraig Brady <pbrady@redhat.com> - 2014.2-1
 - openstack-service: don't restart neutron-ovs-cleanup (rhbz#1133920)
 - openstack-status: don't display status for uninstalled services on systemd platforms
